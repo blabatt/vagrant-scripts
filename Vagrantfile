@@ -32,15 +32,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :compute1 do |compute1_config|
    compute1_config.vm.network :private_network, type: :dhcp, :netmask => "255.255.0.0"
-   # compute1_config.vm.network :private_network, ip: "192.168.206.131" # eth1
-   # compute1_config.vm.network :private_network, ip: "192.168.100.131" # eth2
    compute1_config.vm.host_name = "compute1"
   end
   
   config.vm.define :compute2 do |compute2_config|
    compute2_config.vm.network :private_network, type: :dhcp, :netmask => "255.255.0.0"
-   # compute1_config.vm.network :private_network, ip: "192.168.206.131" # eth1
-   # compute1_config.vm.network :private_network, ip: "192.168.100.131" # eth2
    compute2_config.vm.host_name = "compute2"
   end  
   
