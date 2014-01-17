@@ -30,9 +30,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # client0.vm.network :private_network, type: :dhcp
   # end
 
-  config.vm.define :compute1 do |compute1_config|
-   compute1_config.vm.network :private_network, type: :dhcp, :netmask => "255.255.0.0"
-   compute1_config.vm.host_name = "compute1"
+  config.vm.define :puppetmaster do |puppetmaster_config|
+   puppetmaster_config.vm.network :private_network, type: :dhcp, :netmask => "255.255.0.0"
+   puppetmaster_config.vm.host_name = "puppetmaster"
   end
   
   config.vm.define :compute2 do |compute2_config|
